@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.grid-container {
+  margin: 10% auto;
+}
+
+.grid {
+  white-space: pre;
+}
+
+button {
+  margin: 5px;
+  min-width: 100px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
