@@ -1,5 +1,15 @@
 import { getUnvisitedNeighbors, setPreviousNode, sortNodes, updateNeighbors } from "./helper";
 
+/**
+ * Performs Dijkstra's algorithm, using a queue-like sorted array
+ * to hold the next closest nodes. Not using priority queues
+ * because they don't stable sort, so it looks ugly.
+ *
+ * @param {*} grid The board of nodes.
+ * @param {*} startNode The node where the algorithm starts.
+ * @param {*} finishNode The node where the algorithm ends.
+ * @returns the visited nodes in the order they were visited.
+ */
 export function dijkstra(grid, startNode, finishNode) {
   const visitedNodesInOrder = [];
   const queue = [startNode];

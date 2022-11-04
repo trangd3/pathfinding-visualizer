@@ -1,5 +1,16 @@
 import { getUnvisitedNeighbors, setPreviousNode, sortNodes, updateNeighbors } from "./helper";
 
+/**
+ * Performs A* Search algorithm, using a sorted array based
+ * on distance + heuristic to hold the next closest nodes.
+ * Not using priority queues because they don't stable sort,
+ * so it looks ugly.
+ *
+ * @param {*} grid The board of nodes.
+ * @param {*} startNode The node where the algorithm starts.
+ * @param {*} finishNode The node where the algorithm ends.
+ * @returns the visited nodes in the order they were visited.
+ */
 export function aStar(grid, startNode, finishNode) {
   const visitedNodesInOrder = [];
   const queue = [startNode];

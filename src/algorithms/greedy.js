@@ -1,5 +1,15 @@
 import { getUnvisitedNeighbors, setPreviousNode, sortNodes } from "./helper";
 
+/**
+ * Performs Greedy Best-First Search algorithm, using a
+ * queue-like sorted array based on Manhattan distance
+ * to finishNode to hold the next closest nodes.
+ *
+ * @param {*} grid The board of nodes.
+ * @param {*} startNode The node where the algorithm starts.
+ * @param {*} finishNode The node where the algorithm ends.
+ * @returns the visited nodes in the order they were visited.
+ */
 export function greedy(grid, startNode, finishNode) {
   const visitedNodesInOrder = [];
   const queue = [startNode];
